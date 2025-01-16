@@ -2,6 +2,9 @@ body{
     margin: 0;
     padding: 0;
     height: 100%;
+    background-color: #FEE32A;
+    overflow: auto;
+    background-size: contain;
 }
 
 #background{
@@ -22,4 +25,46 @@ body{
 .sardine{
     width: 450px;
     height: auto;
+}
+
+#parent{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-y: auto;
+
+}
+
+#columns{
+    display: grid;
+    grid-template-columns: repeat(4 , 1fr);
+    gap: 88px;
+    height: 100vh;
+    overflow-y: auto;
+    margin-right: 216px;
+    margin-left: 216px;
+}
+
+.newsprint{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.newsprint:nth-child(1){
+    background-image: url("img/newsprint-column1.png");
+}
+
+.newsprint:nth-child(2){
+    background-image: url("img/newsprint-column2.png");
+}
+
+.newsprint:nth-child(3){
+    background-image: url("img/newsprint-column3.png");
+}
+
+.newsprint:nth-child(4){
+    background-image: url("img/newsprint-column4.png");
 }
