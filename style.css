@@ -105,6 +105,7 @@ body{
 .text::after{
     padding: 10px;
 }
+
 .picture:nth-child(1){
     background-image: url("img/hyunjin.jpg");
 
