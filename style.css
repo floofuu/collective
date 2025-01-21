@@ -38,7 +38,7 @@ body{
     display: grid;
     grid-template-columns: repeat(4 , 1fr);
     gap: 88px;
-    height: 200vh; /*adjust if too long/short */
+    height: 230vh; /*adjust if too long/short */
     margin-right: 216px;
     margin-left: 216px;
 }
@@ -94,7 +94,7 @@ body{
 
 .text{
     margin-top: 35px;
-    margin-bottom: 100px;
+    margin-bottom: 100px; /*change if the gap between the sections is desired*/
     background-color: #FFF27D;
     opacity: 0.8;
     border-radius: 20px;
