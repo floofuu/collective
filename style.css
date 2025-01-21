@@ -10,7 +10,7 @@ body{
     position: relative;
     width: 100%;
     height: 100vh;
-    background-image: url(img/background2.png);
+    background-image: url("img/background2.png");
     background-repeat:no-repeat;
     background-size: 100% 100%;
     background-position:center center;
@@ -18,12 +18,25 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    
 
 }
 
 .sardine{
-    width: 450px;
-    height: auto;
+    width: 563px;
+    height: 439px;
+    background-image: url("img/sardine-bag.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition-property: background-image, cursor;
+    transition-duration: 0.4s;
+    transition-timing-function: ease;
+}
+
+.sardine:hover{
+    background-image: url("img/sardine-bag-open.png");
+    cursor: pointer;
 }
 
 #parent{
@@ -38,14 +51,13 @@ body{
     display: grid;
     grid-template-columns: repeat(4 , 1fr);
     gap: 88px;
-    height: 230vh; /*adjust if too long/short */
+    height: 245vh; /*adjust if too long/short */
     margin-right: 216px;
     margin-left: 216px;
 }
 
 .newsprint{
     display: flex;
-    justify-content: center;
     align-items: center;
     background-position: center;
     background-repeat: no-repeat;
@@ -54,21 +66,6 @@ body{
 
 .newsprint:nth-child(1){
     background-image: url("img/newsprint-column1.png");
-}
-
-.newsprint:nth-child(2){
-    background-image: url("img/newsprint-column2.png");
-}
-
-.newsprint:nth-child(3){
-    background-image: url("img/newsprint-column3.png");
-}
-
-.newsprint:nth-child(4){
-    background-image: url("img/newsprint-column4.png");
-}
-
-.grid{
     display: flex;
     flex-direction: column;
     width: auto;
@@ -76,10 +73,36 @@ body{
 
 }
 
+.newsprint:nth-child(2){
+    background-image: url("img/newsprint-column2.png");
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: 100%;
+
+}
+
+.newsprint:nth-child(3){
+    background-image: url("img/newsprint-column3.png");
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: 100%;
+
+}
+
+.newsprint:nth-child(4){
+    background-image: url("img/newsprint-column4.png");
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: 100%;
+
+}
+
+
 .picture{
     display: flex;
-    justify-content: center;
-    align-items: center;
     width: 180px;
     height: 267px;
     background-size: cover;
@@ -88,33 +111,230 @@ body{
     overflow: hidden;
     border-radius: 20px;
     /*border: 2px solid white; only if border is wanted*/
-    margin-top: 30px;
+    margin: 40px; /*changes the top margine*/
+
 
 }
 
 .text{
-    margin-top: 35px;
-    margin-bottom: 100px; /*change if the gap between the sections is desired*/
+    margin-top: 15px;
+    margin-bottom: 90px; /*change if the gap between the sections is desired*/
     background-color: #FFF27D;
     opacity: 0.8;
     border-radius: 20px;
     line-height: 1.3;
+    font-family: 'Courier New', Courier, monospace;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 60%; /* changes text box size*/
 
 }
 
-.text::after{
-    padding: 10px;
-}
 
 .picture:nth-child(1){
     background-image: url("img/hyunjin.jpg");
+    transform: rotate(-6deg);
+    transition-property: rotate;
+    transition-duration: 1s;
+    transition-timing-function: ease;
+}
 
+.picture:nth-child(1):hover{
+    background-image: url("img/hyunjin\ back.jpg");
+    transform: rotate(12deg);
 }
 
 .picture:nth-child(3){
     background-image: url("img/changbin-hyunjin.jpg");
+    transform: rotate(6deg);
+    transition-property: rotate;
+    transition-duration: 1s;
+    transition-timing-function: ease;
+}
+.picture:nth-child(3):hover{
+    background-image: url("img/changbin-hyunjin\ back.jpg");
+    transform: rotate(-12deg);
 }
 
 .picture:nth-child(5){
     background-image: url("img/bangchan.jpg");
+    transform: rotate(-6deg);
+    transition-property: rotate;
+    transition-duration: 1s;
+    transition-timing-function: ease;
+}
+
+.picture:nth-child(5):hover{
+    background-image: url("img/special\ back.jpg");
+    transform: rotate(12deg);
+}
+
+
+
+.picture2{
+    display: flex;
+    width: 180px;
+    height: 267px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    overflow: hidden;
+    border-radius: 20px;
+    /*border: 2px solid white; only if border is wanted*/
+    margin: 40px; /*changes the top margine*/
+}
+
+.picture2:nth-child(1){
+    background-image: url("img/hyunjin2.jpg");
+    transform: rotate(6deg);
+    transition-property: rotate;
+    transition-duration: 1s;
+    transition-timing-function: ease;
+}
+
+.picture2:nth-child(1):hover{
+    background-image: url("img/special\ back.jpg");
+    transform: rotate(-12deg);
+}
+
+.picture2:nth-child(3){
+    background-image: url("img/seungmin.jpg");
+    transform: rotate(-6deg);
+    transition-property: rotate;
+    transition-duration: 1s;
+    transition-timing-function: ease;
+}
+
+.picture2:nth-child(3):hover{
+    background-image: url("img/special\ back.jpg");
+    transform: rotate(12deg);
+}
+
+.picture2:nth-child(5){
+    background-image: url("img/jeongin.jpg");
+    transform: rotate(6deg);
+    transition-property: rotate;
+    transition-duration: 1s;
+    transition-timing-function: ease;
+}
+
+.picture2:nth-child(5):hover{
+    background-image: url("img/special\ back.jpg");
+    transform: rotate(-12deg);
+}
+
+
+.picture3{
+    display: flex;
+    width: 180px;
+    height: 267px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    overflow: hidden;
+    border-radius: 20px;
+    /*border: 2px solid white; only if border is wanted*/
+    margin: 40px; /*changes the top margine*/
+}
+
+.picture3:nth-child(1){
+    background-image: url("img/txtminisode_soobin.png");
+    transform: rotate(-6deg);
+    transition-property: rotate;
+    transition-duration: 1s;
+    transition-timing-function: ease;
+}
+
+.picture3:nth-child(1):hover{
+    background-image: url("img/txtminisodeback.png");
+    transform: rotate(12deg);
+}
+
+.picture3:nth-child(3){
+    background-image: url("img/txtminisode_yeonjun.png");
+    transform: rotate(6deg);
+    transition-property: rotate;
+    transition-duration: 1s;
+    transition-timing-function: ease;
+}
+.picture3:nth-child(3):hover{
+    background-image: url("img/txtminisodeback.png");
+    transform: rotate(-12deg);
+}
+
+.picture3:nth-child(5){
+    background-image: url("img/txtminisode_beomgyu.png");
+    transform: rotate(-6deg);
+    transition-property: rotate;
+    transition-duration: 1s;
+    transition-timing-function: ease;
+}
+
+.picture3:nth-child(5):hover{
+    background-image: url("img/txtminisodeback.png");
+    transform: rotate(12deg);
+}
+
+
+
+.picture4{
+    display: flex;
+    width: 180px;
+    height: 267px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    overflow: hidden;
+    border-radius: 20px;
+    /*border: 2px solid white; only if border is wanted*/
+    margin: 40px; /*changes the top margine*/
+}
+
+.picture4:nth-child(1){
+    background-image: url("img/txtminisode_taehyun.png");
+    transform: rotate(6deg);
+    transition-property: rotate;
+    transition-duration: 1s;
+    transition-timing-function: ease;
+}
+
+.picture4:nth-child(1):hover{
+    background-image: url("img/txtminisodeback.png");
+    transform: rotate(-12deg);
+}
+
+.picture4:nth-child(3){
+    background-image: url("img/txtminisode_huening.png");
+    transform: rotate(-6deg);
+    transition-property: rotate;
+    transition-duration: 1s;
+    transition-timing-function: ease;
+}
+
+.picture4:nth-child(3):hover{
+    background-image: url("img/txtminisodeback.png");
+    transform: rotate(12deg);
+}
+
+.picture4:nth-child(5){
+    background-image: url("img/jeongin.jpg");
+    transform: rotate(6deg);
+    transition-property: rotate, background-image;
+    transition-duration: 1s;
+    transition-timing-function: ease;
+}
+
+.picture4:nth-child(5):hover{
+    background-image: url("img/special\ back.jpg");
+    transform: rotate(-12deg);
+}
+
+
+.sardine2{
+    width: 245px;
+    height: 160px;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+
 }
