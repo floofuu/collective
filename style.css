@@ -67,3 +67,53 @@ body{
 .newsprint:nth-child(4){
     background-image: url("img/newsprint-column4.png");
 }
+
+.grid{
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: 100%;
+
+}
+
+.picture{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 180px;
+    height: 267px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    overflow: hidden;
+    border-radius: 20px;
+    /*border: 2px solid white; only if border is wanted*/
+    margin-top: 30px;
+
+}
+
+.text{
+    margin-top: 35px;
+    margin-bottom: 100px;
+    background-color: #FFF27D;
+    opacity: 0.8;
+    border-radius: 20px;
+    line-height: 1.3;
+
+}
+
+.text::after{
+    padding: 10px;
+}
+.picture:nth-child(1){
+    background-image: url("img/hyunjin.jpg");
+
+}
+
+.picture:nth-child(3){
+    background-image: url("img/changbin-hyunjin.jpg");
+}
+
+.picture:nth-child(5){
+    background-image: url("img/bangchan.jpg");
+}
