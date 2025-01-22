@@ -41,26 +41,44 @@ body{
 
 #parent{
     margin: 0;
-    padding: 0;
+    padding: 0 ;
+    min-height: 200vh;
+    width: 100%;
     height: 100%;
     background-attachment: scroll;
     background-size: cover;
+    position: relative;
+    align-items: stretch;
+
+
 }
+
+
 
 #columns{
     display: grid;
-    grid-template-columns: repeat(4 , 1fr);
-    gap: 88px;
-    height: 245vh; /*adjust if too long/short */
-    margin-right: 216px;
-    margin-left: 216px;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 20px;
+    width: 100%;
+    height: auto; 
+    align-items: stretch; 
+    
+    
 }
 
 .newsprint{
     display: flex;
+    flex-direction: column; 
+    justify-content: space-between; 
     align-items: center;
     background-position: center;
     background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    min-height: 400px;
+    margin-left: 60px;
+    margin-right: 60px ;
+
 
 }
 
@@ -69,7 +87,9 @@ body{
     display: flex;
     flex-direction: column;
     width: auto;
-    height: 100%;
+    background-size: 100% 100%;
+    
+
 
 }
 
@@ -78,7 +98,7 @@ body{
     display: flex;
     flex-direction: column;
     width: auto;
-    height: 100%;
+
 
 }
 
@@ -86,8 +106,8 @@ body{
     background-image: url("img/newsprint-column3.png");
     display: flex;
     flex-direction: column;
-    width: auto;
-    height: 100%;
+
+
 
 }
 
@@ -112,13 +132,28 @@ body{
     border-radius: 20px;
     /*border: 2px solid white; only if border is wanted*/
     margin: 40px; /*changes the top margine*/
+    position: relative;
 
 
 }
 
+.picture-link {
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%; 
+    height: 100%;
+    display: block; 
+    z-index: 1; 
+    text-indent: -9999px; 
+    cursor: pointer;
+}
+
 .text{
-    margin-top: 15px;
+    margin-top: 10px;
     margin-bottom: 90px; /*change if the gap between the sections is desired*/
+    margin-right: auto;
+    margin-left: auto;
     background-color: #FFF27D;
     opacity: 0.8;
     border-radius: 20px;
@@ -137,6 +172,7 @@ body{
     transition-property: rotate;
     transition-duration: 1s;
     transition-timing-function: ease;
+    
 }
 
 .picture:nth-child(1):hover{
@@ -182,6 +218,7 @@ body{
     border-radius: 20px;
     /*border: 2px solid white; only if border is wanted*/
     margin: 40px; /*changes the top margine*/
+    position: relative;
 }
 
 .picture2:nth-child(1){
@@ -235,10 +272,11 @@ body{
     border-radius: 20px;
     /*border: 2px solid white; only if border is wanted*/
     margin: 40px; /*changes the top margine*/
+    position: relative;
 }
 
 .picture3:nth-child(1){
-    background-image: url("img/txtminisode_soobin.png");
+    background-image: url("img/yeonjun_knight.jpg");
     transform: rotate(-6deg);
     transition-property: rotate;
     transition-duration: 1s;
@@ -246,24 +284,24 @@ body{
 }
 
 .picture3:nth-child(1):hover{
-    background-image: url("img/txtminisodeback.png");
+    background-image: url("img/knight\ back.jpg");
     transform: rotate(12deg);
 }
 
 .picture3:nth-child(3){
-    background-image: url("img/txtminisode_yeonjun.png");
+    background-image: url("img/beomgyu_savior.jpg");
     transform: rotate(6deg);
     transition-property: rotate;
     transition-duration: 1s;
     transition-timing-function: ease;
 }
 .picture3:nth-child(3):hover{
-    background-image: url("img/txtminisodeback.png");
+    background-image: url("img/savior_back.jpg");
     transform: rotate(-12deg);
 }
 
 .picture3:nth-child(5){
-    background-image: url("img/txtminisode_beomgyu.png");
+    background-image: url("img/beomgyu_license.jpg");
     transform: rotate(-6deg);
     transition-property: rotate;
     transition-duration: 1s;
@@ -271,7 +309,7 @@ body{
 }
 
 .picture3:nth-child(5):hover{
-    background-image: url("img/txtminisodeback.png");
+    background-image: url("img/knight_license_back.jpg");
     transform: rotate(12deg);
 }
 
@@ -288,10 +326,11 @@ body{
     border-radius: 20px;
     /*border: 2px solid white; only if border is wanted*/
     margin: 40px; /*changes the top margine*/
+    position: relative;
 }
 
 .picture4:nth-child(1){
-    background-image: url("img/txtminisode_taehyun.png");
+    background-image: url("img/yeonjun_minisode.jpg");
     transform: rotate(6deg);
     transition-property: rotate;
     transition-duration: 1s;
@@ -299,12 +338,12 @@ body{
 }
 
 .picture4:nth-child(1):hover{
-    background-image: url("img/txtminisodeback.png");
+    background-image: url("img/minisode\ back.jpg");
     transform: rotate(-12deg);
 }
 
 .picture4:nth-child(3){
-    background-image: url("img/txtminisode_huening.png");
+    background-image: url("img/taehyun_lover.jpg");
     transform: rotate(-6deg);
     transition-property: rotate;
     transition-duration: 1s;
@@ -312,29 +351,45 @@ body{
 }
 
 .picture4:nth-child(3):hover{
-    background-image: url("img/txtminisodeback.png");
+    background-image: url("img/taehyun_back.jpg");
     transform: rotate(12deg);
 }
 
 .picture4:nth-child(5){
-    background-image: url("img/jeongin.jpg");
+    background-image: url("img/taehyun_license.jpg");
     transform: rotate(6deg);
-    transition-property: rotate, background-image;
-    transition-duration: 1s;
+    transition-property: rotate;
+    transition-duration: 0.05s;
     transition-timing-function: ease;
 }
 
 .picture4:nth-child(5):hover{
-    background-image: url("img/special\ back.jpg");
+    background-image: url("img/knight_license_back.jpg");
     transform: rotate(-12deg);
 }
 
 
-.sardine2{
+.sardine2-container {
+    position: absolute;
+    bottom: 10px ;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10; 
+
+    
+}
+
+.sardine2 {
     width: 245px;
     height: 160px;
-    justify-content: center;
-    position: absolute;
-    bottom: 0;
-
+    background-image: url("img/sardine-bag-open.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
 }
+
+.sardine2:hover {
+    background-image: url("img/sardine-bag.png");
+}
+
